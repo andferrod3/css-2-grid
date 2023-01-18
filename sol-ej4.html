@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRID - EJ4</title>
+  <style>
+    header {
+      grid-area: encab;
+      height: 75px
+    }
+
+    nav {
+        grid-area: naveg;
+    }
+
+    aside.menu {
+        grid-area: barra_lat;
+        height: 200px;
+      
+    }
+
+    article {
+        grid-area: arti;
+    }
+
+    aside.publi {
+        grid-area: publi;
+        height: 50px;
+    }
+
+    footer {
+      grid-area: pie;
+    }
+
+    .contenedor > * {
+      background:grey;
+      border: 3px solid tomato;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    .contenedor{
+      display: grid;
+      grid-gap: 20px;
+      grid-template-areas:
+        "encab encab encab encab"
+        "naveg naveg naveg naveg"
+        "barra_lat arti arti arti"
+        "publi pie pie pie"
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <header>HEADER</header>
+    <nav>NAV</nav>
+    <aside class="menu">SIDEBAR</aside>
+    <article>ARTÍCULO</article>
+    <aside class="publi">PUBLICDIDAD</aside>
+    <footer>FOOTER</footer>
+   </div>  
+</body>
+</html>
